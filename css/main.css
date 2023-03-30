@@ -128,9 +128,9 @@ header {
   background-color: var(--neutral-lt-color); /* not on video */
 }
 /* style for one card to be alternate styling changing one color via local variable */
-/* .cards article.callout {
+.cards article.callout {
   --primary-color: var(--secondary-color);
-} */
+}
 
 .cards h2 {
   text-align: center;
@@ -156,23 +156,41 @@ header {
   margin: 0 0 var(--spacer) var(--spacer) ;
 }
 
+
+/* CREATE VARIABLES FOR THIS ALT STYLE  this isnt working for me 
+[class*='style-'] {
+  /* background-color: var(--bg);
+  color: var(--text-color); 
+}
+*/
+/* .cards article.style-invert {
+  --bg: var(--neutral-dark-color);
+  --text-color: var(--neutral-lt-color);
+  --heading-bg: var(--neutral-dark-color);
+  --btn-bg: var(--tertiary-color);
+  --btn-text: var(--primary-color);
+  --btn-hover-text: var(--neutral-lt-color);
+
+} */
+
 footer {
 /* background-color: var(--secondary-color);
 color: var(--neutral-lt-color); */
+
 /* locally scoped variables shown here for bg and font colors */
   
   --bg-color: #2d627c;
   background-color: var(--bg-color);
   --text-color: #efefef;
   color: var(--text-color);
-/* END locally scoped variables  */
+/* END locally scoped variables */
   text-align: center;
   font-size: 0.8rem;
   padding: 1rem 0 .25rem;
   margin-top: auto;
 }
 
-@media screen and (min-width: 600px ) {
+@media screen and (min-width: 768px ) {
   .cards {
     /* video used display:flex gap and width instead of cols and grid */
      grid-template-columns: 1fr 1fr 1fr;
