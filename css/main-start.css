@@ -7,35 +7,22 @@
   --fw-2: 500;
   --fw-3: 700;
   --fs-base: 1rem;
-  
-  /* alternate theme colors - comment out *colors* for an alternate theme */
-  --primary-color: #98161a;
-  --secondary-color: #df7769;
-  --tertiary-color: #ffd1d3;
-  --neutral-lt-color: #e2f6fd;
-  --neutral-mid-color: #596c72;
-  --neutral-dark-color: #0e1112;
-  --accent-color: #107c7c;
 
-    /* colors */
+  /* colors */
   --primary-color: #2d627c;
   --secondary-color: #4f9bc4;
   --tertiary-color: #a1dbf5;
   --neutral-lt-color: #c5d1d7;
   --neutral-mid-color: #667b7b;
-  --neutral-dark-color: #344040;
   --accent-color: #d06a48;
-
 
   /* helpers */
   --spacer: 1rem;
   --spacer-half: calc(var(--spacer) /2);
   --spacer-double: calc(var(--spacer) * 2);
   --border-radius: 5px;
-  --shadow: 0 0 6px rgba(0, 0, 0, .4);
+  --shadow: 0 0 6px rgba(0 0 0 .4);
 
-  /* responsive */
-  --grid-cols: 1fr;
 
 }
 
@@ -46,7 +33,6 @@
 }
 
 body {
-  /* background-color: var(--neutral-color);  used in video*/
   background-color: var(--tertiary-color);
   color: var(--neutral-mid-color);
   font-family: var(--primary-font);
@@ -68,7 +54,7 @@ h2 {
 }
 
 p {
-  margin-bottom: var(--spacer);
+  margin-bottom: var(--spacer-double);
 }
 
 img {
@@ -77,7 +63,6 @@ img {
 }
 
 header {
-  /* background-color: var(--tertiary-color); in video */
   background-color: var(--secondary-color);
   color: var(--neutral-lt-color);
   padding: var(--spacer-double);
@@ -112,10 +97,10 @@ header {
   transition: background-color 1s ease-in-out;
 }
 
-/* cards styling changed from section to div to make css validator work*/
+
 .cards {
-  display: grid;  /* changed from flex so columns are even width onlarger screen using media queries*/
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--spacer);
   width: 95%;
   margin: var(--spacer-double) auto;
@@ -125,12 +110,12 @@ header {
   border: solid 1px var(--secondary-color);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  background-color: var(--neutral-lt-color); /* not on video */
+  background-color: var(--neutral-lt-color);
 }
-/* style for one card to be alternate styling changing one color via local variable */
-/* .cards article.callout {
+
+.cards article.callout {
   --primary-color: var(--secondary-color);
-} */
+}
 
 .cards h2 {
   text-align: center;
@@ -157,27 +142,15 @@ header {
 }
 
 footer {
-/* background-color: var(--secondary-color);
-color: var(--neutral-lt-color); */
-/* locally scoped variables shown here for bg and font colors */
-  
-  --bg-color: #2d627c;
-  background-color: var(--bg-color);
-  --text-color: #efefef;
-  color: var(--text-color);
-/* END locally scoped variables  */
+  background-color: var(--secondary-color);
+  color: var(--neutral-lt-color);
   text-align: center;
   font-size: 0.8rem;
   padding: 1rem 0 .25rem;
   margin-top: auto;
 }
 
-@media screen and (min-width: 600px ) {
-  .cards {
-    /* video used display:flex gap and width instead of cols and grid */
-     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
+
 
 
 

@@ -7,25 +7,14 @@
   --fw-2: 500;
   --fw-3: 700;
   --fs-base: 1rem;
-  
-  /* alternate theme colors - comment out *colors* for an alternate theme */
-  --primary-color: #98161a;
-  --secondary-color: #df7769;
-  --tertiary-color: #ffd1d3;
-  --neutral-lt-color: #e2f6fd;
-  --neutral-mid-color: #596c72;
-  --neutral-dark-color: #0e1112;
-  --accent-color: #107c7c;
 
-    /* colors */
+  /* colors */
   --primary-color: #2d627c;
   --secondary-color: #4f9bc4;
   --tertiary-color: #a1dbf5;
   --neutral-lt-color: #c5d1d7;
   --neutral-mid-color: #667b7b;
-  --neutral-dark-color: #344040;
   --accent-color: #d06a48;
-
 
   /* helpers */
   --spacer: 1rem;
@@ -157,15 +146,8 @@ header {
 }
 
 footer {
-/* background-color: var(--secondary-color);
-color: var(--neutral-lt-color); */
-/* locally scoped variables shown here for bg and font colors */
-  
-  --bg-color: #2d627c;
-  background-color: var(--bg-color);
-  --text-color: #efefef;
-  color: var(--text-color);
-/* END locally scoped variables  */
+  background-color: var(--secondary-color);
+  color: var(--neutral-lt-color);
   text-align: center;
   font-size: 0.8rem;
   padding: 1rem 0 .25rem;
